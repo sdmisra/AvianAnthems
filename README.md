@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# BirdWords
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract:
+[//]: <>
+ 
+## Installation Instructions:
+[//]: <>
 
-## Available Scripts
+1. Clone down this repo
 
-In the project directory, you can run:
+1. Install dependencies by using ‘npm install’ in your terminal within the root directory.
 
-### `npm start`
+1. To host website on your local machine, run ’npm start’ in terminal.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. A window should be opened in your default browser, if not, navigate to http://localhost:3000 in your preferred browser to view the hosted application!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Testing Instructions:
+[//]: <>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the test suite associated with the classes behind the scenes and how they interact: 
 
-### `npm run build`
+Run 'npm run cypress' from the terminal while within the main directory of the application and select E2E Testing, and your chosen browser in the following window.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Preview of App:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[//]: <>
+Live demo:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Application is deployed live at:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Context:
+[//]: <>
+This project was assigned in the third week of module 3 for Front End students at Turing. The work was completed over the course of the following ten days.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributors:
+[//]: <>
+[Josh Martin](https://github.com/jmartin777) /
+[Shane Misra](https://github.com/sdmisra) /
+[Carol Bradsen](https://github.com/cbradsen) /
+[Cade Chaney](https://github.com/cadechaney) /
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Learning Goals:
+[//]: <>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- 
 
-## Learn More
+## Future Feature Ideas:
+[//]: <>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- User login feature, enabling favoriting / saving movie selection between visits.
