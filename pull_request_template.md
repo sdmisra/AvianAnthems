@@ -19,7 +19,7 @@
 - [ ] Breaks some things & Creates new issues
 - [ ] Code in this branch has been tested  
 - [ ] Code is DRY, reusable, follows SRP and trends toward function purity 
-- [ ] I've updated the project board and standup file to reflect changes
+- [ ] I've updated the project board to reflect changes
 
 
 ## ✍🏽 Notes, Questions, What's Next
