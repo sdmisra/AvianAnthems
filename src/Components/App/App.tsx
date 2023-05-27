@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import MainPage from '../MainPage/MainPage'
+import Header from '../Header/Header'
+
 
 type AppState = {
   count: number
@@ -20,7 +22,7 @@ render() {
       {/* <h1>Hello</h1> */}
       {/* <button onClick={this.handleClick}></button> */}
       {/* {this.state.count} */}
-      {/* <Header /> */}
+      <Header />
       <MainPage />
     </div>
   )
