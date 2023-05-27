@@ -1,5 +1,5 @@
 import { Component } from 'react';
-
+import MainPage from '../MainPage/MainPage'
 
 type AppState = {
   count: number
@@ -17,10 +17,11 @@ handleClick = () => {
 render() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <button onClick={this.handleClick}></button>
-      {this.state.count}
-
+      {/* <h1>Hello</h1> */}
+      {/* <button onClick={this.handleClick}></button> */}
+      {/* {this.state.count} */}
+      {/* <Header /> */}
+      <MainPage />
     </div>
   )
 }
