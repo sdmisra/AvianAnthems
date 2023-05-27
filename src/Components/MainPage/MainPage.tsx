@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import Form from '../Form/Form'
 import blueBirds from '../../assets/birds 08.png'
 import './MainPage.css'
 
@@ -9,7 +10,7 @@ function MainPage() {
     <>
       <section className='info-container'>
         <img className='blueBirds-image' src={blueBirds} alt='bird'></img>
-        {/* <Form /> */}
+        <Form />
       </section>
       <footer>footer</footer>
     </>
