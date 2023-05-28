@@ -8,10 +8,10 @@ class Form extends Component {
   render() {
       return (
         <>
-          <form>
-            <label className='country-label'>
+          <form className='dropdown-menu'>
+            <label className='continent-label'>
               Continent:
-              <select name='contient'>
+              <select name='continent'>
                 <option value='africa'>Africa</option>
                 <option value='america'>Americas</option>
                 <option value='asia'>Asia</option>
