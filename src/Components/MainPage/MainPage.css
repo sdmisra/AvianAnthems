@@ -8,3 +8,8 @@
   height: 20px;
   
 }
+.about-us{
+  display: flex;
+  justify-content: space-around;
+  border:#D8D174 solid 2px;
+}

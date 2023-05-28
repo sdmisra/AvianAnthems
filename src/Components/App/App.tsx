@@ -25,7 +25,7 @@ render() {
       {/* {this.state.count} */}
       <Header />
       <Switch>
-        <Route exact path="/" component={MainPage}>
+        <Route exact path="/">
          <MainPage />
         </Route>
       </Switch>
