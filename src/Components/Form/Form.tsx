@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Form.css'
 
 class Form extends Component {
 
@@ -7,11 +8,11 @@ class Form extends Component {
 
   render() {
       return (
-        <>
-          <form>
-            <label className='country-label'>
+        
+          <form className='dropdown-menu'>
+            <label className='continent-label'>
               Continent:
-              <select name='contient'>
+              <select name='continent'>
                 <option value='africa'>Africa</option>
                 <option value='america'>Americas</option>
                 <option value='asia'>Asia</option>
@@ -33,8 +34,9 @@ class Form extends Component {
                   <option value='all-songs'>All Songs</option>
                 </select>
             </label>
+            <button>Search</button>
           </form>
-        </>
+        
 
       )
   }

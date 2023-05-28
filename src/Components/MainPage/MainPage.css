@@ -2,9 +2,18 @@
 
 .info-container {
   border: 2px solid blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 77vh;
 }
 
 .blueBirds-image {
-  height: 20px;
+  height: 40em;
   
+}
+.about-us{
+  display: flex;
+  justify-content: space-around;
+  border:#D8D174 solid 2px;
 }
