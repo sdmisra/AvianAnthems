@@ -1,0 +1,13 @@
+body {
+  background-color: #b6c454;
+}
+
+.header {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nest-image {
+  height: 6em;
+}
