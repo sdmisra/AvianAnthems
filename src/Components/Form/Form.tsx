@@ -15,7 +15,7 @@ type FormState = {
 
 class Form extends Component<FormProps, FormState> {
   state = {
-    selectedCnt: '',
+    selectedCnt: 'United States',
     selectedType: ''
   }
 
@@ -35,7 +35,7 @@ class Form extends Component<FormProps, FormState> {
             <label className='continent-label'>
               Continent:
               <select className='country' name='country' onChange={event => this.setState({selectedCnt : event.target.value})}>
-                <option value="usa">United States</option>
+                <option value="United States">United States</option>
                 <option value='africa'>Africa</option>
                 <option value='america'>Americas</option>
                 <option value='asia'>Asia</option>

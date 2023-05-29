@@ -4,6 +4,7 @@ import Header from '../Header/Header'
 import SearchResults from '../SearchResults/SearchResults'
 import { Route, Switch } from 'react-router-dom'
 import mockData from '../../MockData/mock-data.json'
+import { data } from 'cypress/types/jquery'
 
 type AppState = {
   count: number
@@ -22,8 +23,12 @@ class App extends Component<{}, AppState> {
 
 fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
   event.preventDefault()
-  console.log(formState.selectedCnt, formState.selectedType)
-  console.log("Chirp Chirp API Call:", mockData)
+  const filteredData = mockData.recordings.filter(data => 
+       data.cnt === this.state.currentCnt && data.type.includes(this.state.currentType)) 
+    console.log(filteredData)
+  this.setState({searchResults: filteredData})  
+    console.log(this.state)
+ 
   }
 
 render() {
