@@ -1,16 +1,21 @@
 
-import React, { Component } from 'react'
+import React, { Component, MouseEvent } from 'react'
 import Form from '../Form/Form'
 import blueBirds from '../../assets/birds 08.png'
 import './MainPage.css'
 
-function MainPage() {
+type MainPageProps = {
+  selected: string,
+  findRecording: (event: MouseEvent<HTMLButtonElement>) => void
+}
+
+function MainPage( props: MainPageProps ) {
 
   return (
     <>
       <section className='info-container'>
         <img className='blueBirds-image' src={blueBirds} alt='bird'></img>
-        <Form />
+        <Form selected={props.selected}  findRecording={props.findRecording}/>
       </section>
       <footer className='about-us'>
         <span>
