@@ -1,18 +1,14 @@
 import React, { Component, MouseEvent } from 'react'
+import { Link } from 'react-router-dom'
 import './Form.css'
 import '../../MockData/mock-data.json'
 
 type FormProps = {
   selected: string,
-  findRecording: (event: MouseEvent<HTMLButtonElement>) => void
+  fetchResults: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
 class Form extends Component<FormProps> {
-  // state = {
-  //   continent: 
-  // }
-  
-  // const dropdownCountry = document.getElementsByClassName(".country") as HTMLSelectElement
 
   render() {
       return (
@@ -43,7 +39,12 @@ class Form extends Component<FormProps> {
                   <option value='all-songs'>Any Song</option>
                 </select>
             </label>
-            <button onClick={event =>  {this.props.findRecording(event)}}>Search</button>
+            <button className="shrinky-link" onClick={event =>  {this.props.fetchResults(event)}}>
+            <Link to="/results">
+              Search
+            </Link>
+            </button>
+
           </form>
   
       )

@@ -3,6 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   height: 40%;
   width: 20%;
+}
+
+.shrinky-link {
+  width: 3.15rem;
 }

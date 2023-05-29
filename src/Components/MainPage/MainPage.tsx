@@ -5,8 +5,9 @@ import blueBirds from '../../assets/birds 08.png'
 import './MainPage.css'
 
 type MainPageProps = {
-  selected: string,
-  findRecording: (event: MouseEvent<HTMLButtonElement>) => void
+  selectedCnt: string,
+  selectedType: string,
+  fetchResults: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
 function MainPage( props: MainPageProps ) {
@@ -15,7 +16,7 @@ function MainPage( props: MainPageProps ) {
     <>
       <section className='info-container'>
         <img className='blueBirds-image' src={blueBirds} alt='bird'></img>
-        <Form selected={props.selected}  findRecording={props.findRecording}/>
+        <Form selected={props.selectedCnt}  fetchResults={props.fetchResults}/>
       </section>
       <footer className='about-us'>
         <span>
