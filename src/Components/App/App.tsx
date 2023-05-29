@@ -24,7 +24,7 @@ class App extends Component<{}, AppState> {
 fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
   event.preventDefault()
   const filteredData = mockData.recordings.filter(data => 
-       data.cnt === this.state.currentCnt && data.type.includes(this.state.currentType)) 
+       data.cnt === formState.selectedCnt && data.type.includes(formState.selectedType)) 
     console.log(filteredData)
   this.setState({searchResults: filteredData})  
     console.log(this.state)
@@ -40,7 +40,7 @@ render() {
          <MainPage selectedCnt={this.state.currentCnt} selectedType={this.state.currentType} fetchResults={this.fetchResults} />
         </Route>
         <Route exact path="/results">
-          <SearchResults />
+          <SearchResults results={this.state.searchResults} />
         </Route>
       </Switch>
     </div>
