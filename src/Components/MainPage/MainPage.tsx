@@ -1,12 +1,13 @@
 
-import React, { Component, MouseEvent } from 'react'
+import React, { MouseEvent } from 'react'
 import Form from '../Form/Form'
 import blueBirds from '../../assets/birds 08.png'
 import './MainPage.css'
 
 type MainPageProps = {
-  selected: string,
-  findRecording: (event: MouseEvent<HTMLButtonElement>) => void
+  selectedCnt: string,
+  selectedType: string,
+  fetchResults: (event: MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => void
 }
 
 function MainPage( props: MainPageProps ) {
@@ -15,7 +16,7 @@ function MainPage( props: MainPageProps ) {
     <>
       <section className='info-container'>
         <img className='blueBirds-image' src={blueBirds} alt='bird'></img>
-        <Form selected={props.selected}  findRecording={props.findRecording}/>
+        <Form selectedCnt={props.selectedCnt}  selectedType={props.selectedType} fetchResults={props.fetchResults}/>
       </section>
       <footer className='about-us'>
         <span>
