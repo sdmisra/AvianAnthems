@@ -1,5 +1,5 @@
 
-import React, { Component, MouseEvent } from 'react'
+import React, { MouseEvent } from 'react'
 import Form from '../Form/Form'
 import blueBirds from '../../assets/birds 08.png'
 import './MainPage.css'
@@ -7,7 +7,7 @@ import './MainPage.css'
 type MainPageProps = {
   selectedCnt: string,
   selectedType: string,
-  fetchResults: (event: MouseEvent<HTMLButtonElement>) => void
+  fetchResults: (event: MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => void
 }
 
 function MainPage( props: MainPageProps ) {

@@ -1,23 +1,40 @@
 import React, { Component, MouseEvent } from 'react'
 import { Link } from 'react-router-dom'
 import './Form.css'
-import '../../MockData/mock-data.json'
 
 type FormProps = {
   selectedCnt: string,
   selectedType: string,
-  fetchResults: (event: MouseEvent<HTMLButtonElement>) => void
+  fetchResults: (event: MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => void
 }
 
-class Form extends Component<FormProps> {
+type FormState = {
+  selectedCnt: string
+  selectedType: string
+}
+
+class Form extends Component<FormProps, FormState> {
+  state = {
+    selectedCnt: '',
+    selectedType: ''
+  }
+
+  // handleChange = (event: any) => {
+  //   console.log(event.target.name)
+  //   console.log(event.target.value)
+  //   if (event.target.name === 'country') {
+  //     console.log(this.state)
+  //   } else {
+  //     console.log(this.state)
+  //   }
+  // }
 
   render() {
       return (
-        
           <form className='dropdown-menu'>
             <label className='continent-label'>
               Continent:
-              <select className='country' name='country'>
+              <select className='country' name='country' onChange={event => this.setState({selectedCnt : event.target.value})}>
                 <option value="usa">United States</option>
                 <option value='africa'>Africa</option>
                 <option value='america'>Americas</option>
@@ -29,7 +46,7 @@ class Form extends Component<FormProps> {
             </label>
             <label>
                 Song Type:
-                <select name='song-type'>
+                <select className='song-type' name='song-type' onChange={event => this.setState({selectedType : event.target.value})}>
                   <option value='calling-song' >Calling Song</option>
                   <option value='courtship-song' >Courtship Song</option>
                   <option value='dawn-song' >Dawn Song</option>
@@ -43,7 +60,8 @@ class Form extends Component<FormProps> {
             <button 
             className="shrinky-link" 
             onClick={(event) =>{
-              this.props.fetchResults(event)
+              console.log(this.state)
+              this.props.fetchResults(event, this.state)
               }}>
 
             <Link to="/results">

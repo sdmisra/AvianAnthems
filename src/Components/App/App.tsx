@@ -1,13 +1,15 @@
-import { Component, MouseEvent } from 'react'
+import { Component } from 'react'
 import MainPage from '../MainPage/MainPage'
 import Header from '../Header/Header'
 import SearchResults from '../SearchResults/SearchResults'
 import { Route, Switch } from 'react-router-dom'
+import mockData from '../../MockData/mock-data.json'
 
 type AppState = {
   count: number
   currentCnt: string
   currentType: string
+  searchResults: Array<{}>
 }
 
 class App extends Component<{}, AppState> {
@@ -15,11 +17,13 @@ class App extends Component<{}, AppState> {
     count: 0,
     currentCnt: "",
     currentType: "",
+    searchResults: []
   }
 
-fetchResults = (event: React.MouseEvent<HTMLButtonElement>) => {
+fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
   event.preventDefault()
-  console.log("YES")
+  console.log(formState.selectedCnt, formState.selectedType)
+  console.log("Chirp Chirp API Call:", mockData)
   }
 
 render() {
