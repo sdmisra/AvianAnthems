@@ -1,12 +1,12 @@
 
-import React, { Component } from 'react'
+import React, { Component, MouseEvent } from 'react'
 import Form from '../Form/Form'
 import blueBirds from '../../assets/birds 08.png'
 import './MainPage.css'
 
 type MainPageProps = {
   selected: string,
-  findRecording: () => MouseEvent
+  findRecording: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
 function MainPage( props: MainPageProps ) {

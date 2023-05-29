@@ -9,15 +9,15 @@ type AppState = {
   
 }
 
-type AppProps = {
-  myFunction: () => MouseEvent
-}
+// type AppProps = {
+//   myFunction: () => MouseEvent
+// }
 
 // type AppFunctions = {
 //   findRecording: () => MouseEvent
 // }
 
-class App extends Component<AppProps, AppState> {
+class App extends Component<{}, AppState> {
   state = {
     count: 0,
     currentSelection: "",
@@ -28,8 +28,8 @@ handleClick = () => {
   this.setState((prevState) => ({ count: prevState.count + 1}))
 }
 
-findRecording(event: MouseEvent<HTMLButtonElement>) {
-  this.props.myFunction
+findRecording = (event: React.MouseEvent<HTMLButtonElement>) => {
+  // this.props.myFunction
   event.preventDefault()
 console.log("YES")
   }

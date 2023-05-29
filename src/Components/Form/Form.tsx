@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, MouseEvent } from 'react'
 import './Form.css'
 import '../../MockData/mock-data.json'
 
 type FormProps = {
   selected: string,
-  findRecording: () => MouseEvent
+  findRecording: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
 class Form extends Component<FormProps> {
@@ -43,7 +43,7 @@ class Form extends Component<FormProps> {
                   <option value='all-songs'>Any Song</option>
                 </select>
             </label>
-            <button onClick={() =>  {this.props.findRecording()}}>Search</button>
+            <button onClick={event =>  {this.props.findRecording(event)}}>Search</button>
           </form>
   
       )
