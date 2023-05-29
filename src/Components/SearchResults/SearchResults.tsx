@@ -22,7 +22,7 @@ const SearchResults = ({ results }: SearchResultsProps) => {
   return (
     <section className="search-results">
       <h1> Results from your search</h1>
-      <u>
+      <ul>
           {results.map((result) => (
             <li key={result.id}>
               <p>{result.en}</p>
@@ -33,7 +33,7 @@ const SearchResults = ({ results }: SearchResultsProps) => {
               <p>{result.cnt}</p>
             </li>
           ))}
-      </u>
+      </ul>
     </section>
   )
 }
