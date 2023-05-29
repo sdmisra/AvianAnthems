@@ -16,7 +16,7 @@ function MainPage( props: MainPageProps ) {
     <>
       <section className='info-container'>
         <img className='blueBirds-image' src={blueBirds} alt='bird'></img>
-        <Form selected={props.selectedCnt}  fetchResults={props.fetchResults}/>
+        <Form selectedCnt={props.selectedCnt}  selectedType={props.selectedType} fetchResults={props.fetchResults}/>
       </section>
       <footer className='about-us'>
         <span>

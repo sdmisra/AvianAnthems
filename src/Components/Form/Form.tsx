@@ -4,7 +4,8 @@ import './Form.css'
 import '../../MockData/mock-data.json'
 
 type FormProps = {
-  selected: string,
+  selectedCnt: string,
+  selectedType: string,
   fetchResults: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
@@ -39,7 +40,12 @@ class Form extends Component<FormProps> {
                   <option value='all-songs'>Any Song</option>
                 </select>
             </label>
-            <button className="shrinky-link" onClick={event =>  {this.props.fetchResults(event)}}>
+            <button 
+            className="shrinky-link" 
+            onClick={(event) =>{
+              this.props.fetchResults(event)
+              }}>
+
             <Link to="/results">
               Search
             </Link>
