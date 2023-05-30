@@ -1,5 +1,6 @@
 import React from 'react'
 import './SearchResults.css'
+import ResultCard from "../ResultCard/ResultCard"
 
 type Result = {
   id: string;
@@ -9,8 +10,6 @@ type Result = {
   type: string;
   file: string;
   cnt: string;
-
-
 }
 
 type SearchResultsProps = {
@@ -19,21 +18,23 @@ type SearchResultsProps = {
 
 const SearchResults = ({ results }: SearchResultsProps) => {
 
+const resultCards = results.map(result => {
   return (
-    <section className="search-results">
+    <ResultCard 
+      bird={result.en}
+      stage={result.stage}
+      sex={result.sex}
+      songType={result.type}
+      performance={result.file}
+      country={result.cnt}
+      key={result.id}
+    />
+  )
+})
+  return (
+    <section className="search-results-container">
       <h1> Results from your search</h1>
-      <ul>
-          {results.map((result) => (
-            <li key={result.id}>
-              <p>{result.en}</p>
-              <p>{result.stage}</p>
-              <p>{result.sex}</p>
-              <p>{result.type}</p>
-              <p>{result.file}</p>
-              <p>{result.cnt}</p>
-            </li>
-          ))}
-      </ul>
+        {resultCards}
     </section>
   )
 }
