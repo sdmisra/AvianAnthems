@@ -28,14 +28,17 @@ const resultCards = results.map(result => {
       performance={result.file}
       country={result.cnt}
       key={result.id}
+      id={result.id}
     />
   )
 })
   return (
+    <div className="search-title">
+    <h1> Results from your search</h1>
     <section className="search-results-container">
-      <h1> Results from your search</h1>
         {resultCards}
     </section>
+    </div>
   )
 }
 

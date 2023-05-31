@@ -1,7 +1,13 @@
 .search-results-container {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  width:100%;
+  justify-content: space-evenly;
+  
+}
+
+.search-title{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
   
 }

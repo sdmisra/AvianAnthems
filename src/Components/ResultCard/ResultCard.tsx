@@ -9,12 +9,13 @@ type ResultCardProps = {
   songType: string;
   performance: string;
   country: string;
+  id: string;
 }
 
-const ResultCard = ({ bird, stage, sex, songType, performance, country }: ResultCardProps) => {
+const ResultCard = ({ bird, stage, sex, songType, performance, country, id }: ResultCardProps) => {
 
   return (
-   <div>
+   <div className='card' id={id} >
       <h4>{bird}</h4>
       <h5>{stage} {sex}, {songType}</h5>
       <audio src={performance} controls></audio>
