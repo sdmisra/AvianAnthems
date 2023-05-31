@@ -8,9 +8,10 @@ type ResultCardProps = {
   songType: string;
   performance: string;
   country: string;
+  id: string;
 }
 
-const ResultCard = ({ bird, stage, sex, songType, performance, country }: ResultCardProps) => {
+const ResultCard = ({ bird, stage, sex, songType, performance, country, id }: ResultCardProps) => {
 
   return (
    <div className="result-card">

@@ -28,6 +28,7 @@ const resultCards = results.slice(0, 6).map(result => {
       performance={result.file}
       country={result.cnt}
       key={result.id}
+      id={result.id}
     />
   )
 })
