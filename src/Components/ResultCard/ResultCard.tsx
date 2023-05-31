@@ -1,4 +1,3 @@
-
 import './ResultCard.css';
 
 
@@ -14,12 +13,12 @@ type ResultCardProps = {
 const ResultCard = ({ bird, stage, sex, songType, performance, country }: ResultCardProps) => {
 
   return (
-   <div>
-      <h4>{bird}</h4>
-      <h5>{stage} {sex}, {songType}</h5>
-      <audio src={performance} controls></audio>
-      <h5>{country}</h5>
-
+   <div className="result-card">
+      <h4 className="card-header">Performer: {bird}</h4>
+      <h5 className="card-detail">Age: {stage || 'unavailable'}, Sex: {sex || 'uncertain'}</h5>
+      <h5 className="card-detail">Song Type: {songType}</h5>
+      <audio src={performance} controls className="card-controls"></audio>
+      <h5 className="card-detail">Location of Recording: {country}</h5>
    </div>
   )
 }

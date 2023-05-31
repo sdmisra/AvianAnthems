@@ -55,8 +55,7 @@ class Form extends Component<FormProps, FormState> {
               console.log(this.state)
               this.props.fetchResults(event, this.state)
               }}>
-
-            <Link to="/results">
+            <Link to="/results" className="link-style">
               Search
             </Link>
             </button>

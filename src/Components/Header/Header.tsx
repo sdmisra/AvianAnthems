@@ -1,10 +1,12 @@
 import React from 'react'
 import Nest from '../../assets/pngegg.png'
+import {Link} from 'react-router-dom'
 import './Header.css'
 
 function Header() {
 
   return (
+    <Link to="/">
     <div className='header'>
       <img className='nest-image' src={Nest} alt='nest to home page' ></img>
       <div className='title-styling'>
@@ -12,6 +14,7 @@ function Header() {
         <p>Exploring the World Through Birdsong</p>
       </div>
     </div>
+    </Link>
   )
 }
 
