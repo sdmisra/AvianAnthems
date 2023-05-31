@@ -46,6 +46,7 @@ fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selected
       .then((data: ApiResponse) => {
         const filtered = data.recordings.filter(recording => recording.type === 'flight call')
         console.log(filtered)
+        this.setState({ searchResults: filtered})
       })
       break;
       default:
