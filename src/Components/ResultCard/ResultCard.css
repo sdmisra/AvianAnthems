@@ -2,6 +2,8 @@
   display:flex;
   flex-direction: column;
   align-items: center;
+  max-width: 15rem;
+  max-height: 22rem;
   border: .10rem solid #80b0c3;
   background-color: #fffaf5af;
   border-radius: 1.25rem;
@@ -11,5 +13,5 @@
 
 .card-controls {
   filter: sepia(80%) saturate(90%) grayscale(0) contrast(99%) invert(12%);
-  scale: .90
+  scale: .65
 }

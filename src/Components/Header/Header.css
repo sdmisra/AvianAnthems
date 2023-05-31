@@ -3,11 +3,17 @@ body {
 }
 
 .header {
-  border: 2px solid red;
+  background-color: #f6fedbcb;
+  border: .25rem solid #4B7F52;
+  border-radius: .55rem;
   display: flex;
   justify-content: space-between;
+  padding: .75rem;
 }
 
 .nest-image {
-  height: 6em;
+  min-width: 1em;
+  min-height: 1em;
+  max-height: 6em;
+  max-width: 6em;
 }
