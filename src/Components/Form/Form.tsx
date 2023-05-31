@@ -16,7 +16,7 @@ type FormState = {
 class Form extends Component<FormProps, FormState> {
   state = {
     selectedCnt: 'United States',
-    selectedType: ''
+    selectedType: 'drumming'
   }
 
   // handleChange = (event: any) => {
@@ -43,10 +43,10 @@ class Form extends Component<FormProps, FormState> {
             <label>
                 Song Type:
                 <select className='song-type' name='song-type' onChange={event => this.setState({selectedType : event.target.value})}>
-                  <option value='courtship-song' >Courtship Song</option>
-                  <option value='disturbance-song' >Disturbance Song</option>
-                  <option value='flight-song'>Flight Song</option>
-                  <option value='all-songs'>Any Song</option>
+                  <option value='drumming' >Drumming</option>
+                  <option value='alarm-call' >Alarm Call</option>
+                  <option value='flight-call'>Flight Call</option>
+                  {/* <option value='all-songs'>Any Song</option> */}
                 </select>
             </label>
             <button 
