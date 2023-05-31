@@ -32,28 +32,20 @@ class Form extends Component<FormProps, FormState> {
   render() {
       return (
           <form className='dropdown-menu'>
-            <label className='continent-label'>
-              Continent:
+            <label className='country-label'>
+              Country:
               <select className='country' name='country' onChange={event => this.setState({selectedCnt : event.target.value})}>
                 <option value="United States">United States</option>
-                <option value='africa'>Africa</option>
-                <option value='america'>Americas</option>
-                <option value='asia'>Asia</option>
-                <option value='australia'>Australia</option>
-                <option value='europe'>Europe</option>
-                <option value='world-wide'>Any Location</option>
+                <option value='canada'>Canada</option>
+                <option value='mexico'>Mexico</option>
               </select>
             </label>
             <label>
                 Song Type:
                 <select className='song-type' name='song-type' onChange={event => this.setState({selectedType : event.target.value})}>
-                  <option value='calling-song' >Calling Song</option>
                   <option value='courtship-song' >Courtship Song</option>
-                  <option value='dawn-song' >Dawn Song</option>
                   <option value='disturbance-song' >Disturbance Song</option>
-                  <option value='duet-song' >Duet Song</option>
                   <option value='flight-song'>Flight Song</option>
-                  <option value='rivalry-song' >Rivalry Song</option>
                   <option value='all-songs'>Any Song</option>
                 </select>
             </label>

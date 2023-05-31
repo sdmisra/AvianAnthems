@@ -18,7 +18,7 @@ type SearchResultsProps = {
 
 const SearchResults = ({ results }: SearchResultsProps) => {
 
-const resultCards = results.map(result => {
+const resultCards = results.slice(0, 6).map(result => {
   return (
     <ResultCard 
       bird={result.en}
