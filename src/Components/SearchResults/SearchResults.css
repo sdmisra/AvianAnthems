@@ -1,13 +1,15 @@
-.search-results-container {
+.results-page {
   display: flex;
-  width:100%;
-  justify-content: space-evenly;
-  
+  flex-direction: column;
+  align-items: center;
 }
 
-.search-title{
-  display:flex;
-  align-items: center;
-  flex-direction: column;
-  
+.search-results-container {
+  width: 90vw;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
+  margin: 2rem;
 }
+

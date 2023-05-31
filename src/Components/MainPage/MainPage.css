@@ -1,7 +1,4 @@
-
-
 .info-container {
-  border: 2px solid blue;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -13,7 +10,8 @@
   
 }
 .about-us{
+  background-color: #f6fedbcb;
+  border-top: .25rem solid #4B7F52;
   display: flex;
   justify-content: space-around;
-  border:#D8D174 solid 2px;
 }

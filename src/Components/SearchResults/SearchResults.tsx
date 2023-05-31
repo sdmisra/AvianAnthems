@@ -33,11 +33,11 @@ const resultCards = results.slice(0, 6).map(result => {
   )
 })
   return (
-    <div className="search-title">
-    <h1> Results from your search</h1>
-    <section className="search-results-container">
-        {resultCards}
-    </section>
+    <div className="results-page">
+      <h1> Search Results:</h1>
+      <section className="search-results-container">
+          {resultCards}
+      </section>
     </div>
   )
 }
