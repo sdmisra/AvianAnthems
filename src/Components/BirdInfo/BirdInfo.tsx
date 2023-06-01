@@ -2,9 +2,12 @@ import React from 'react'
 import './BirdInfo.css'
 import assets from '../../assets/birds 07.png'
 
+type BirdProps = {
+  chosenBird: {id:string} | {}
+}
 
-const BirdInfo = () => {
-
+const BirdInfo = (props : BirdProps) => {
+  console.log(props)
   return ( 
     <div className="info-container">
       <img className="bird" src={assets} alt="two birds looking at you from a branch"></img>
