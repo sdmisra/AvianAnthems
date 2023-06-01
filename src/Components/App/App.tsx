@@ -3,9 +3,6 @@ import MainPage from '../MainPage/MainPage'
 import Header from '../Header/Header'
 import SearchResults from '../SearchResults/SearchResults'
 import { Route, Switch } from 'react-router-dom'
-import mockData from '../../MockData/mock-data.json'
-// import { data } from 'cypress/types/jquery'
-import callData from '../Api/ApiCalls'
 import { FetchConditional } from '../../FetchConditonal/FetchConditional'
 
 type AppState = {
@@ -13,6 +10,7 @@ type AppState = {
   currentCnt: string
   currentType: string
   searchResults: Array<{}>
+  chosenID: string
 }
 
 class App extends Component<{}, AppState> {
@@ -20,7 +18,8 @@ class App extends Component<{}, AppState> {
     count: 0,
     currentCnt: "",
     currentType: "",
-    searchResults: []
+    searchResults: [],
+    chosenID: ''
   }
 
 fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
@@ -33,7 +32,7 @@ fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selected
       })
   }
   handleClick = (id:string) =>{
-    console.log(id)
+    this.setState({...this.state, chosenID: id})
   }
 
 render() {
@@ -47,7 +46,7 @@ render() {
         <Route exact path="/results">
           <SearchResults results={this.state.searchResults} getInfo={this.handleClick} />
         </Route>
-        <Route path='/info/:id'>   
+        <Route path='/info/:id'>
         </Route>
       </Switch>
     </div>
