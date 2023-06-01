@@ -32,6 +32,9 @@ fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selected
         this.setState({ searchResults: data})
       })
   }
+  handleClick = (id:string) =>{
+    console.log(id)
+  }
 
 render() {
   return (
@@ -42,7 +45,9 @@ render() {
          <MainPage selectedCnt={this.state.currentCnt} selectedType={this.state.currentType} fetchResults={this.fetchResults} />
         </Route>
         <Route exact path="/results">
-          <SearchResults results={this.state.searchResults} />
+          <SearchResults results={this.state.searchResults} getInfo={this.handleClick} />
+        </Route>
+        <Route path='/info/:id'>   
         </Route>
       </Switch>
     </div>
