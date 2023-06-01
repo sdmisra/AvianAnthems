@@ -10,7 +10,7 @@ type AppState = {
   currentCnt: string
   currentType: string
   searchResults: Array<{}> | Array<birdObject>
-  chosenBird: birdObject | {}
+  chosenBird: birdObject
 }
 
 type birdObject = {
@@ -28,7 +28,7 @@ class App extends Component<{}, AppState> {
     currentCnt: "",
     currentType: "",
     searchResults: [],
-    chosenBird: {}
+    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:''}
   }
 
   fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
@@ -43,7 +43,9 @@ class App extends Component<{}, AppState> {
     const foundBird = this.state.searchResults.find(bird => bird['id']=== id);
 
     foundBird ? 
-      this.setState({chosenBird: foundBird}) : this.setState({chosenBird: {}});
+      this.setState({chosenBird: foundBird}) 
+      : 
+      this.setState({chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:''}});
 
     console.log('App state at time of click:', this.state.chosenBird);
   }
