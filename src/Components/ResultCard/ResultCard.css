@@ -15,3 +15,8 @@
   filter: sepia(80%) saturate(90%) grayscale(0) contrast(99%) invert(12%);
   scale: .65
 }
+
+.more-info{
+  width: 8rem;
+  height: 2rem;
+}
