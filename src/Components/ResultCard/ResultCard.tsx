@@ -9,10 +9,10 @@ type ResultCardProps = {
   performance: string;
   country: string;
   id: string;
+  getInfo: (id:string) => void
 }
 
-const ResultCard = ({ bird, stage, sex, songType, performance, country, id }: ResultCardProps) => {
-
+const ResultCard = ({ bird, stage, sex, songType, performance, country, id, getInfo }: ResultCardProps) => {
   return (
    <div className="result-card">
       <h4 className="card-header">
@@ -23,7 +23,7 @@ const ResultCard = ({ bird, stage, sex, songType, performance, country, id }: Re
       <h5 className="card-detail">Song Type: {songType}</h5>
       <audio src={performance} controls className="card-controls"></audio>
       <Link to= {`/info/${id}`}>
-        <button className='more-info' id={id}>..Learn More</button>
+        <button className='more-info' id={id} onClick={() => getInfo('fire!')}>..Learn More</button>
       </Link>
      
    </div>

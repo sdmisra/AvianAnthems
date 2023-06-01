@@ -14,9 +14,10 @@ type Result = {
 
 type SearchResultsProps = {
   results: Array<Result>;
+  getInfo: (id:string) => void
 }
 
-const SearchResults = ({ results }: SearchResultsProps) => {
+const SearchResults = ({ results, getInfo }: SearchResultsProps) => {
 
 const resultCards = results.slice(0, 6).map(result => {
   return (
@@ -29,6 +30,7 @@ const resultCards = results.slice(0, 6).map(result => {
       country={result.cnt}
       key={result.id}
       id={result.id}
+      getInfo={getInfo}
     />
   )
 })
