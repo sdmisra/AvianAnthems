@@ -1,5 +1,5 @@
 import './ResultCard.css';
-
+import { Link } from 'react-router-dom';
 
 type ResultCardProps = {
   bird: string;
@@ -16,18 +16,16 @@ const ResultCard = ({ bird, stage, sex, songType, performance, country, id }: Re
   return (
    <div className="result-card">
       <h4 className="card-header">
-      Performer:
-      <br/>
         {bird}
       </h4>
       <h5 className="card-detail">
-        Age: {stage || 'unavailable'}
-      <br/>
-        Sex: {sex || 'uncertain'}</h5>
+        Location of Recording: {country}</h5>
       <h5 className="card-detail">Song Type: {songType}</h5>
       <audio src={performance} controls className="card-controls"></audio>
-      <h5 className="card-detail">
-        Location of Recording: {country}</h5>
+      <Link to= {`/info/${id}`}>
+        <button className='more-info' id={id}>..Learn More</button>
+      </Link>
+     
    </div>
   )
 }
