@@ -1,0 +1,24 @@
+.info-container {
+  border: 3px solid red;
+}
+
+.bird {
+ height: 200px;
+}
+
+.bird-data-container {
+  border: 2px solid blue;
+}
+
+.audio-details-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.osci-image {
+  height: 80px;
+  width: 100%;
+  margin-top: 10%;
+}
+

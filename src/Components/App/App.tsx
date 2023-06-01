@@ -7,6 +7,7 @@ import mockData from '../../MockData/mock-data.json'
 // import { data } from 'cypress/types/jquery'
 import callData from '../Api/ApiCalls'
 import { FetchConditional } from '../../FetchConditonal/FetchConditional'
+import BirdInfo from '../BirdInfo/BirdInfo'
 
 type AppState = {
   count: number
