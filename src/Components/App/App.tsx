@@ -10,17 +10,17 @@ type AppState = {
   currentCnt: string
   currentType: string
   searchResults: Array<{}> | Array<birdObject>
-  chosenBird: {} | birdObject
+  chosenBird: birdObject | {}
 }
 
 type birdObject = {
-  bird: string;
+  id: string;
+  en: string;
+  cnt: string;
+  file: string;
   stage: string;
   sex: string;
   songType: string;
-  performance: string;
-  country: string;
-  id: string;
 }
 
 class App extends Component<{}, AppState> {
@@ -35,16 +35,17 @@ class App extends Component<{}, AppState> {
       event.preventDefault()
       FetchConditional(formState.selectedCnt, formState.selectedType)
       .then(data => {
-        console.log(data)
         this.setState({ searchResults: data})
       })
   }
   
   handleClick = (id:string) =>{
     const foundBird = this.state.searchResults.find(bird => bird['id']=== id);
+
     foundBird ? 
-    this.setState({chosenBird: foundBird}) : this.setState({chosenBird: {}})
-    console.log('A bird has been chosen:', this.state.chosenBird)
+      this.setState({chosenBird: foundBird}) : this.setState({chosenBird: {}});
+
+    console.log('App state at time of click:', this.state.chosenBird);
   }
 
   render() {
@@ -53,13 +54,22 @@ class App extends Component<{}, AppState> {
         <Header />
         <Switch>
           <Route exact path="/">
-            <MainPage selectedCnt={this.state.currentCnt} selectedType={this.state.currentType} fetchResults={this.fetchResults} />
+            <MainPage 
+            selectedCnt={this.state.currentCnt} 
+            selectedType={this.state.currentType} 
+            fetchResults={this.fetchResults} 
+            />
           </Route>
           <Route exact path="/results">
-            <SearchResults results={this.state.searchResults} getInfo={this.handleClick} />
+            <SearchResults 
+            results={this.state.searchResults} 
+            getInfo={this.handleClick} 
+            />
           </Route>
           <Route path='/info/:id'>
-            <BirdInfo chosenBird={this.state.chosenBird}/>
+            <BirdInfo 
+            chosenBird={this.state.chosenBird}
+            />
           </Route>
         </Switch>
       </div>
