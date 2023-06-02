@@ -65,7 +65,7 @@ class App extends Component<{}, AppState> {
           <Route exact path="/results">
             <SearchResults 
             results={this.state.searchResults} 
-            getInfo={this.handleClick} 
+            getInfo={this.handleClick} // maybe rename this function! confusing
             />
           </Route>
           <Route path='/info/:id'>
