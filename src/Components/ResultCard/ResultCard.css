@@ -27,12 +27,6 @@
   }
 }
 
-.result-card {
-  max-width: 100%; 
-  margin: 1rem; 
-}
-
-
 @media (min-width: 321px) and (max-width: 767px) {
 .search-results-container {
   grid-template-columns: repeat(2, 1fr); 
@@ -49,4 +43,9 @@
 .search-results-container {
   grid-template-columns: repeat(4, 1fr); 
 }
+}
+
+.result-card {
+  max-width: 100%; 
+  margin: 1rem; 
 }

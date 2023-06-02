@@ -37,3 +37,41 @@
   opacity: 0.8;
   transform: scale(1.1);
 }
+
+@media (max-width: 320px) {
+  .bird-data-container {
+    width: 90%; 
+  }
+  
+  .audio-details-container {
+    width: 80%; 
+  }
+  
+  .osci-image {
+    width: 80%; 
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .bird-data-container {
+    width: 70%; 
+  }
+  
+  .audio-details-container {
+    width: 60%; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .bird-data-container {
+    width: 50%; 
+  }
+  
+  .audio-details-container {
+    width: 40%; 
+  }
+}
+
+@media (min-width: 1201px) {
+
+}
