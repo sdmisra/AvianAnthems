@@ -2,57 +2,80 @@ import { Component } from 'react'
 import MainPage from '../MainPage/MainPage'
 import Header from '../Header/Header'
 import SearchResults from '../SearchResults/SearchResults'
-import { Route, Switch } from 'react-router-dom'
-import mockData from '../../MockData/mock-data.json'
-// import { data } from 'cypress/types/jquery'
-import callData from '../Api/ApiCalls'
-import { FetchConditional } from '../../FetchConditonal/FetchConditional'
 import BirdInfo from '../BirdInfo/BirdInfo'
+import { Route, Switch } from 'react-router-dom'
+import { FetchConditional } from '../../FetchConditonal/FetchConditional'
 
 type AppState = {
-  count: number
   currentCnt: string
   currentType: string
-  searchResults: Array<{}>
+  searchResults: Array<{}> | Array<birdObject>
+  chosenBird: birdObject
+}
+
+type birdObject = {
+  id: string;
+  en: string;
+  cnt: string;
+  file: string;
+  stage: string;
+  sex: string;
+  songType: string;
 }
 
 class App extends Component<{}, AppState> {
   state = {
-    count: 0,
     currentCnt: "",
     currentType: "",
-    searchResults: []
+    searchResults: [],
+    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:''}
   }
 
-fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
-  event.preventDefault()
-  
+  fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
+      event.preventDefault()
       FetchConditional(formState.selectedCnt, formState.selectedType)
       .then(data => {
-        console.log(data)
         this.setState({ searchResults: data})
       })
   }
+  
   handleClick = (id:string) =>{
-    console.log(id)
+    const foundBird = this.state.searchResults.find(bird => bird['id']=== id);
+
+    foundBird ? 
+      this.setState({chosenBird: foundBird}) 
+      : 
+      this.setState({chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:''}});
+
+    console.log('App state at time of click:', this.state.chosenBird);
   }
 
-render() {
-  return (
-    <div className="App">
-      <Header />
-      <Switch>
-        <Route exact path="/">
-         <MainPage selectedCnt={this.state.currentCnt} selectedType={this.state.currentType} fetchResults={this.fetchResults} />
-        </Route>
-        <Route exact path="/results">
-          <SearchResults results={this.state.searchResults} getInfo={this.handleClick} />
-        </Route>
-        <Route path='/info/:id'>   
-        </Route>
-      </Switch>
-    </div>
-  )
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <MainPage 
+            selectedCnt={this.state.currentCnt} 
+            selectedType={this.state.currentType} 
+            fetchResults={this.fetchResults} 
+            />
+          </Route>
+          <Route exact path="/results">
+            <SearchResults 
+            results={this.state.searchResults} 
+            getInfo={this.handleClick} // maybe rename this function! confusing
+            />
+          </Route>
+          <Route path='/info/:id'>
+            <BirdInfo 
+            chosenBird={this.state.chosenBird}
+            />
+          </Route>
+        </Switch>
+      </div>
+    )
 }
 }
 
