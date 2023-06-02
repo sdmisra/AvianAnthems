@@ -7,10 +7,13 @@
 }
 
 .bird-data-container {
-  border: .10rem solid#4B7F52;
+  border: .2rem solid#4B7F52;
   display: flex;
   justify-content: center;
   flex-direction: column-reverse;
+  border-radius: 10px;
+  width: 17em;
+  align-items: center;
 }
 
 .audio-details-container {
@@ -22,7 +25,7 @@
 
 .osci-image {
   height: 80px;
-  width: 90%;
+  width: 60%;
   margin-top: 10%;
   transition: opacity 0.3s ease-in-out;
    border: 2px solid #4B7F52;
