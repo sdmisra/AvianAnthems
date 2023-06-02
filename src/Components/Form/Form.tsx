@@ -53,7 +53,7 @@ class Form extends Component<FormProps, FormState> {
                 <select className='song-type' name='song-type' onChange={event => this.setState({selectedType : event.target.value})}>
                   <option value='flight-call'>Flight Call</option>
                   <option value='alarm-call' >Alarm Call</option>
-                  <option value='song'>Common Song</option>
+                  <option value='call'>Common Call</option>
                   {/* <option value='drumming' >Drumming</option> */}
                   {/* <option value='all-songs'>Any Song</option> */}
                 </select>

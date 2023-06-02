@@ -19,11 +19,11 @@ const ResultCard = ({ bird, stage, sex, songType, performance, country, id, getI
         {bird}
       </h4>
       <h5 className="card-detail">
-        Location of Recording: {country}</h5>
-      <h5 className="card-detail">Song Type: {songType}</h5>
+        Location: {country}</h5>
+      <h5 className="card-detail">Type: {songType}</h5>
       <audio src={performance} controls className="card-controls"></audio>
       <Link to= {`/info/${id}`}>
-        <button className='more-info' id={id} onClick={(event) => getInfo((event.target as HTMLButtonElement ).id)}>..Learn More</button>
+        <button className='more-info' id={id} onClick={(event) => getInfo((event.target as HTMLButtonElement ).id)}>Learn More</button>
       </Link>
      
    </div>
