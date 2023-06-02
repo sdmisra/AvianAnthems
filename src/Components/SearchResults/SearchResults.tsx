@@ -2,6 +2,9 @@ import React from 'react'
 import './SearchResults.css'
 import ResultCard from "../ResultCard/ResultCard"
 
+
+
+
 type Result = {
   id: string;
   en: string;
@@ -38,14 +41,14 @@ const resultCards = results.slice(0, 6).map(result => {
   )
   }
 })
-  return (
-    <div className="results-page">
-      <h1> Search Results:</h1>
-      <section className="search-results-container">
-          {resultCards} 
-      </section>
-    </div>
-  )
+return (
+  <div className="results-page">
+    <h1>Search Results:</h1>
+    <section className="search-results-container">
+      {resultCards}
+    </section>
+  </div>
+);
 }
 
 export default SearchResults;
