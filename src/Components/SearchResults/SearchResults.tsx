@@ -22,9 +22,13 @@ type SearchResultsProps = {
 
 const SearchResults = ({ results, getInfo }: SearchResultsProps) => {
   const seenBirds = new Set<string>();
-const resultCards = results.slice(0, 6).map(result => {
-  if (!seenBirds.has(result.en)) {
+  const maxUniqueBirds = 6;
+  let uniqueBirds = 0;
+
+  const resultCards = results.map(result => {
+    if (uniqueBirds < maxUniqueBirds && !seenBirds.has(result.en)) {
     seenBirds.add(result.en)
+    uniqueBirds += 1;
   
   return (
     <ResultCard 

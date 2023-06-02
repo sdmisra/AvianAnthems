@@ -11,12 +11,18 @@
   padding: .25rem;
 }
 
+.card-detail {
+  margin: .4rem;
+
+}
 .card-controls {
   filter: sepia(80%) saturate(90%) grayscale(0) contrast(99%) invert(12%);
   scale: .65
+  
 }
 
 .more-info{
+  margin: .5rem;
   width: 8rem;
   height: 2rem;
 }
