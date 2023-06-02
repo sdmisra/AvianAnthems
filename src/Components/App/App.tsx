@@ -21,6 +21,13 @@ type birdObject = {
   stage: string;
   sex: string;
   songType: string;
+  loc: string;
+  date: string;
+  rec: string;
+  also: string;
+  rmk: string;
+  osci: string;
+  sono: string;
 }
 
 class App extends Component<{}, AppState> {
@@ -28,14 +35,14 @@ class App extends Component<{}, AppState> {
     currentCnt: "",
     currentType: "",
     searchResults: [],
-    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:''}
+    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:'', sono:'' }
   }
 
   fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
       event.preventDefault()
       FetchConditional(formState.selectedCnt, formState.selectedType)
       .then(data => {
-        this.setState({ searchResults: data})
+        this.setState({ searchResults: data })
       })
   }
   
@@ -45,7 +52,7 @@ class App extends Component<{}, AppState> {
     foundBird ? 
       this.setState({chosenBird: foundBird}) 
       : 
-      this.setState({chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:''}});
+      this.setState({chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:'', sono:'' }});
 
     console.log('App state at time of click:', this.state.chosenBird);
   }
@@ -71,6 +78,7 @@ class App extends Component<{}, AppState> {
           <Route path='/info/:id'>
             <BirdInfo 
             chosenBird={this.state.chosenBird}
+            
             />
           </Route>
         </Switch>
