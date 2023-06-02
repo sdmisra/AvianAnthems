@@ -18,8 +18,11 @@ type SearchResultsProps = {
 }
 
 const SearchResults = ({ results, getInfo }: SearchResultsProps) => {
-
+  const seenBirds = new Set<string>();
 const resultCards = results.slice(0, 6).map(result => {
+  if (!seenBirds.has(result.en)) {
+    seenBirds.add(result.en)
+  
   return (
     <ResultCard 
       bird={result.en}
@@ -33,6 +36,7 @@ const resultCards = results.slice(0, 6).map(result => {
       getInfo={getInfo}
     />
   )
+  }
 })
   return (
     <div className="results-page">

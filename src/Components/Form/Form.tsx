@@ -16,7 +16,7 @@ type FormState = {
 class Form extends Component<FormProps, FormState> {
   state = {
     selectedCnt: 'United States',
-    selectedType: 'drumming'
+    selectedType: 'flight-call'
   }
 
   // handleChange = (event: any) => {
@@ -38,14 +38,23 @@ class Form extends Component<FormProps, FormState> {
                 <option value="United States">United States</option>
                 <option value='canada'>Canada</option>
                 <option value='mexico'>Mexico</option>
+                <option value='gambia'>Gambia</option>
+                <option value='ethiopia'>Ethiopia</option>
+                <option value='spain'>Spain</option>
+                <option value='papua new guinea'>Papua New Guinea</option>
+                <option value='vietnam'>Vietnam</option>
+                <option value='romania'>Romania</option>
+                <option value='jamaica'>Jamaica</option>
+                <option value='japan'>Japan</option>
               </select>
             </label>
             <label>
                 Song Type:
                 <select className='song-type' name='song-type' onChange={event => this.setState({selectedType : event.target.value})}>
-                  <option value='drumming' >Drumming</option>
-                  <option value='alarm-call' >Alarm Call</option>
                   <option value='flight-call'>Flight Call</option>
+                  <option value='alarm-call' >Alarm Call</option>
+                  <option value='song'>Common Song</option>
+                  {/* <option value='drumming' >Drumming</option> */}
                   {/* <option value='all-songs'>Any Song</option> */}
                 </select>
             </label>
