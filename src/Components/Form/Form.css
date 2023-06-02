@@ -1,7 +1,7 @@
 .dropdown-menu {
   background-color: #f6fedbcb;
   border: .25rem solid #4B7F52;
-  border-radius: .25rem;
+  border-radius: 3.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

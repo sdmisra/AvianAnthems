@@ -20,3 +20,32 @@
   width: 8rem;
   height: 2rem;
 }
+
+@media (max-width: 320px) {
+  .search-results-container {
+    grid-template-columns: repeat(1, 1fr); /* Show one column on smaller screens */
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+.search-results-container {
+  grid-template-columns: repeat(2, 1fr); 
+}
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+.search-results-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (min-width: 1201px) {
+.search-results-container {
+  grid-template-columns: repeat(4, 1fr); 
+}
+}
+
+.result-card {
+  max-width: 100%; 
+  margin: 1rem; 
+}

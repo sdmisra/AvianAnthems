@@ -1,24 +1,77 @@
 .info-container {
-  border: 3px solid red;
+  border: 0rem solid #80b0c3;
 }
 
 .bird {
- height: 200px;
+ height: 50em;
 }
 
 .bird-data-container {
-  border: 2px solid blue;
+  border: .2rem solid#4B7F52;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  border-radius: 10px;
+  width: 17em;
+  align-items: center;
 }
 
 .audio-details-container {
   display: flex;
   flex-direction: column;
   width: 40%;
+  align-items: center;
 }
 
 .osci-image {
   height: 80px;
-  width: 100%;
+  width: 60%;
   margin-top: 10%;
+  transition: opacity 0.3s ease-in-out;
+   border: 2px solid #4B7F52;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.osci-image:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+@media (max-width: 320px) {
+  .bird-data-container {
+    width: 90%; 
+  }
+  
+  .audio-details-container {
+    width: 80%; 
+  }
+  
+  .osci-image {
+    width: 80%; 
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .bird-data-container {
+    width: 70%; 
+  }
+  
+  .audio-details-container {
+    width: 60%; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .bird-data-container {
+    width: 50%; 
+  }
+  
+  .audio-details-container {
+    width: 40%; 
+  }
+}
+
+@media (min-width: 1201px) {
+
+}
