@@ -2,9 +2,6 @@ import React from 'react'
 import './SearchResults.css'
 import ResultCard from "../ResultCard/ResultCard"
 
-
-
-
 type Result = {
   id: string;
   en: string;
@@ -20,7 +17,7 @@ type SearchResultsProps = {
   getInfo: (id:string) => void
 }
 
-const SearchResults = ({ results, getInfo }: SearchResultsProps) => {
+const SearchResults = ({ results, getInfo }: SearchResultsProps ) => {
   const seenBirds = new Set<string>();
   const maxUniqueBirds = 6;
   let uniqueBirds = 0;
