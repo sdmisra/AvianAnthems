@@ -17,3 +17,7 @@ body {
   max-height: 6em;
   max-width: 6em;
 }
+
+.nest-image:hover {
+  transform: scale(1.2)
+}
