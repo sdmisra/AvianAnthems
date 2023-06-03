@@ -9,14 +9,18 @@
 .bird-data-container {
   border: .2rem solid#4B7F52;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   border-radius: 10px;
-  min-width: 40%;
+  max-width: 20%;
   height: 80%;
-  align-items: center;
+  align-items: flex-start;
+  padding: 3rem;
   margin: 2rem;
+}
 
+h3 {
+  text-transform: uppercase;
 }
 
 .audio-details-container {
