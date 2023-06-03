@@ -4,7 +4,7 @@ import Header from '../Header/Header'
 import SearchResults from '../SearchResults/SearchResults'
 import BirdInfo from '../BirdInfo/BirdInfo'
 import Error from '../Error/Error'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { FetchConditional } from '../../FetchConditonal/FetchConditional'
 
 type AppState = {
@@ -38,7 +38,7 @@ class App extends Component<{}, AppState> {
     currentType: "",
     searchResults: [],
     chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{ med:''}, sono:'' },
-    error: 'This is an error'
+    error: 'An error has occured. Click our corner nest to fly back home!'
   }
 
   fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
@@ -65,9 +65,6 @@ class App extends Component<{}, AppState> {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path="/error">
-            <Error message={this.state.error}/>
-          </Route>
           <Route exact path="/">
             <MainPage 
             selectedCnt={this.state.currentCnt} 
@@ -85,6 +82,12 @@ class App extends Component<{}, AppState> {
             <BirdInfo 
             chosenBird={this.state.chosenBird}
             />
+          </Route>
+          <Route exact path="/error">
+            <Error message={this.state.error}/>
+          </Route>
+          <Route>
+            <Redirect to="/error"/>
           </Route>
         </Switch>
       </div>

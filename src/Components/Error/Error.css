@@ -1,0 +1,8 @@
+.error-window {
+  display:flex;
+}
+
+.error-text {
+  display:flex;
+  font-size: 1.5rem;
+}
