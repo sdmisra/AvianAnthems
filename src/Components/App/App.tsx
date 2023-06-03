@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import MainPage from '../MainPage/MainPage'
 import Header from '../Header/Header'
 import SearchResults from '../SearchResults/SearchResults'
@@ -20,14 +20,13 @@ type birdObject = {
   file: string;
   stage: string;
   sex: string;
-  songType: string;
+  type: string;
   loc: string;
   date: string;
   rec: string;
   also: string;
   rmk: string;
-  osci: string;
-  sono: string;
+  osci: {med: string};
 }
 
 class App extends Component<{}, AppState> {
@@ -35,10 +34,10 @@ class App extends Component<{}, AppState> {
     currentCnt: "",
     currentType: "",
     searchResults: [],
-    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:'', sono:'' }
-  }
+    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci: {med: '' }
+  }}
 
-  fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt : string, selectedType : string}) => {
+  fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt: string, selectedType: string}) => {
       event.preventDefault()
       FetchConditional(formState.selectedCnt, formState.selectedType)
       .then(data => {
@@ -52,7 +51,7 @@ class App extends Component<{}, AppState> {
     foundBird ? 
       this.setState({chosenBird: foundBird}) 
       : 
-      this.setState({chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', songType:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:'', sono:'' }});
+      this.setState({chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci: {med:''}}});
 
     console.log('App state at time of click:', this.state.chosenBird);
   }
@@ -86,5 +85,7 @@ class App extends Component<{}, AppState> {
     )
 }
 }
+
+
 
 export default App;
