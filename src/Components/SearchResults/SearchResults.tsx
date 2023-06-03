@@ -4,7 +4,6 @@ import ResultCard from "../ResultCard/ResultCard"
 import plantImage from "/Users/joshuamartin/turing_work/3mod/birdWords/src/assets/plant.png"
 
 
-
 type Result = {
   id: string;
   en: string;
@@ -20,11 +19,15 @@ type SearchResultsProps = {
   getInfo: (id:string) => void
 }
 
-const SearchResults = ({ results, getInfo }: SearchResultsProps) => {
+const SearchResults = ({ results, getInfo }: SearchResultsProps ) => {
   const seenBirds = new Set<string>();
-const resultCards = results.slice(0, 6).map(result => {
-  if (!seenBirds.has(result.en)) {
+  const maxUniqueBirds = 6;
+  let uniqueBirds = 0;
+
+  const resultCards = results.map(result => {
+    if (uniqueBirds < maxUniqueBirds && !seenBirds.has(result.en)) {
     seenBirds.add(result.en)
+    uniqueBirds += 1;
   
   return (
     <ResultCard 
