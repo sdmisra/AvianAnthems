@@ -4,7 +4,7 @@
   align-items: center;
   max-width: 15rem;
   max-height: 22rem;
-  border: .10rem solid #80b0c3;
+  border: .33rem solid #4B7F52;
   background-color: #fffaf5af;
   border-radius: 1.25rem;
   margin: .75rem;
@@ -24,8 +24,12 @@
 .more-info{
   margin: .5rem;
   width: 8rem;
-  height: 2rem;
+    height: 2rem;
+    color: black;
+    background-color: #b6c454;
+    font-weight: bold;
 }
+
 
 @media (max-width: 320px) {
   .search-results-container {

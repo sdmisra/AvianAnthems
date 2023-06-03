@@ -5,7 +5,7 @@ body {
 .header {
   background-color: #f6fedbcb;
   border: .25rem solid #4B7F52;
-  border-radius: .55rem;
+  border-radius: .15rem;
   display: flex;
   justify-content: space-between;
   padding: .75rem;
@@ -16,4 +16,8 @@ body {
   min-height: 1em;
   max-height: 6em;
   max-width: 6em;
+}
+
+.nest-image:hover {
+  transform: scale(1.2)
 }
