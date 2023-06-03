@@ -12,8 +12,12 @@ body {
 }
 
 .nest-image {
-  min-width: 3em;
-  min-height: 7em;
-  max-height: 7em;
-  max-width: 6em
+  min-width: 1em;
+  min-height: 1em;
+  max-height: 6em;
+  max-width: 6em;
+}
+
+.nest-image:hover {
+  transform: scale(1.2)
 }

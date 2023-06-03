@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className='header'>
       <Link to="/">
-        <img className='nest-image' src={Nest} alt='nest to home page' ></img>
+        <img className='nest-image' src={Nest} alt='nest to home page' title='Click to View Main Page' ></img>
       </Link>
       <div className='title-styling'>
         <h1>AvianAnthems:</h1> 
