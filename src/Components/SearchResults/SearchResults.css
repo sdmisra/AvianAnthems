@@ -11,12 +11,22 @@
   grid-template-columns: repeat(3, 1fr);
   padding: 2rem;
   margin: 2rem;
+  justify-items: center;
   
 }
 
-.plant-flower-image {
-  width: 100px; /* Adjust the width as needed */
-  height: auto; /* Maintain the aspect ratio */
-  margin-right: 10px; /* Add spacing between the image and search results */
+.image-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
 }
+
+.image {
+  width: auto;
+  height: 70em;
+  margin-right: 0px; 
+  position: absolute;
+
+}
+
 

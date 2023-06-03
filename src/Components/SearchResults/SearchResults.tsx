@@ -1,6 +1,8 @@
 import React from 'react'
 import './SearchResults.css'
 import ResultCard from "../ResultCard/ResultCard"
+import plantImage from "/Users/joshuamartin/turing_work/3mod/birdWords/src/assets/plant.png"
+
 
 type Result = {
   id: string;
@@ -46,6 +48,9 @@ return (
   <div className="results-page">
     <h1>Search Results:</h1>
     <section className="search-results-container">
+      <div className="image-container">
+        <img src={plantImage} alt="Plant" className="image" />
+      </div>
       {resultCards}
     </section>
   </div>
