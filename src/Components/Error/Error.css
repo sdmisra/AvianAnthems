@@ -1,5 +1,6 @@
 .error-window {
   display:flex;
+  justify-content: center;
 }
 
 .error-text {

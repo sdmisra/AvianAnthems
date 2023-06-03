@@ -51,13 +51,15 @@ class App extends Component<{}, AppState> {
   
   handleClick = (id:string) =>{
     const foundBird = this.state.searchResults.find(bird => bird['id']=== id);
+    const resetBird = {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{med:''}, sono:'' }
 
-    foundBird ? 
-      this.setState({chosenBird: foundBird}) 
-      : 
-      this.setState({chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{med:''}, sono:'' }});
-
-    console.log('App state at time of click:', this.state.chosenBird);
+    if (foundBird) {
+      this.setState({chosenBird: foundBird})
+    }
+    else {
+      this.setState({chosenBird: resetBird, error: 'No results Found! Please fly back home and try again'});
+      <Redirect to='/error'/>
+    }
   }
 
   render() {
