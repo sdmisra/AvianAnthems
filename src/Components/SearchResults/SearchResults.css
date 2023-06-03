@@ -17,19 +17,39 @@
   justify-content: space-around;
 }
 
-
 .image-container {
-    overflow: hidden;
-    display: flex;
-    justify-content: right;
+  overflow: hidden;
+  display: flex;
+  justify-content: right;
 }
 
 .image {
   width: auto;
   height: 70em;
-  margin-right: 0px; 
+  margin-right: 0px;
   position: absolute;
   margin: -8em;
 }
 
+@media (max-width: 768px) {
+  .search-results-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image {
+    height: 50em;
+    margin: -6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-results-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    height: 40em;
+    margin: -4em;
+  }
+}
 

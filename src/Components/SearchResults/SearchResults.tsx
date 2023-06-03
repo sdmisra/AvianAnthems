@@ -53,6 +53,7 @@ return (
       </div>
       {resultCards}
     </section>
+    
   </div>
 );
 }
