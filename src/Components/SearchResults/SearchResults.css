@@ -12,8 +12,11 @@
   padding: 2rem;
   margin: 2rem;
   justify-items: center;
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
 
 .image-container {
     overflow: hidden;
@@ -26,7 +29,7 @@
   height: 70em;
   margin-right: 0px; 
   position: absolute;
-
+  margin: -8em;
 }
 
 

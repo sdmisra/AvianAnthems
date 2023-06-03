@@ -7,20 +7,22 @@
 }
 
 .bird-data-container {
-  border: .2rem solid#4B7F52;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  border-radius: 10px;
-  max-width: 20%;
-  height: 80%;
-  align-items: flex-start;
-  padding: 3rem;
-  margin: 2rem;
+ border: 0.3rem solid#4B7F52;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    max-width: 30%;
+    height: 80%;
+    align-items: flex-start;
+    padding: 3rem;
+    margin: 4rem;
+    background-color: #f6fedbcb;
 }
 
 h3 {
   text-transform: uppercase;
+  font-size: 1.5em;
 }
 
 .audio-details-container {
@@ -30,14 +32,24 @@ h3 {
   align-items: center;
 }
 
+.bird-info-audio{
+  align-items: center;
+  margin-left: 15em;
+  border: 0.23rem solid #4B7F52;
+  border-radius: 30px;
+}
+
 .osci-image {
   height: 80px;
-  width: 60%;
-  margin-top: 10%;
-  transition: opacity 0.3s ease-in-out;
-   border: 2px solid #4B7F52;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 279%;
+    margin-top: 10%;
+    transition: opacity 0.3s ease-in-out;
+    border: 2px solid #4B7F52;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 16em;
+    align-items: center;
+    background-color: yellowgreen;
 }
 
 .osci-image:hover {

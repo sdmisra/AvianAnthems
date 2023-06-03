@@ -11,7 +11,7 @@ function Header() {
         <img className='nest-image' src={Nest} alt='nest to home page' ></img>
       </Link>
       <div className='title-styling'>
-        <h1>AvianAnthems:</h1> 
+        <h1>𝑨𝒗𝒊𝒂𝒏 𝑨𝒏𝒕𝒉𝒆𝒎𝒔 :</h1> 
         <p>Exploring the World Through Birdsong</p>
       </div>
     </div>
