@@ -60,6 +60,7 @@ class Form extends Component<FormProps, FormState> {
             </label>
             <button 
             className="shrinky-link" 
+            data-cy="search"
             onClick={(event) =>{
               console.log(this.state)
               this.props.fetchResults(event, this.state)
