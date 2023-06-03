@@ -16,6 +16,7 @@ describe('Search Results', () => {
 //   it('should show a message if there are no results', () => {
 //   // the new mock-empty-data is just an empty array
 //   cy.intercept('GET', 'https://xeno-canto.org/api/2/**', { fixture: 'mock-empty-data' });
+// something like this with the error messaging that Shane wrote:  cy.get('.error-message').contains('No results found');
 //   cy.get('.no-results').should('exist');
 // })
 
