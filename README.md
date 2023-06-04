@@ -1,6 +1,4 @@
-# BirdWords
-
-## Abstract:
+# Avian Anthems:
 [//]: <>
 In a world where many people are disconnected from nature, Avian Anthems brings nature's music right to them.  
 Avian Anthenms allows people to listen to birdcalls from many of the most interesting birding areas in the world. 
