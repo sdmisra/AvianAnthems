@@ -9,6 +9,9 @@
   height: 100%;
 }
 
+h4 {
+  font-weight: 600;
+}
 .about-us{
   height: 15vh;
   background-color: #f6fedbcb;

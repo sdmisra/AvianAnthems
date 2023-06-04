@@ -12,7 +12,7 @@ type ResultCardProps = {
   getInfo: (id:string) => void
 }
 
-const ResultCard = ({ bird, stage, sex, songType, performance, country, id, getInfo }: ResultCardProps) => {
+const ResultCard = ({ bird, songType, performance, country, id, getInfo }: ResultCardProps) => {
   return (
    <div className="result-card">
     <div className='details'>
@@ -26,8 +26,7 @@ const ResultCard = ({ bird, stage, sex, songType, performance, country, id, getI
       <audio src={performance} controls className="card-controls"></audio>
       <Link to= {`/info/${id}`}>
         <button className='more-info' id={id} onClick={(event) => getInfo((event.target as HTMLButtonElement ).id)}>Learn More</button>
-      </Link>
-     
+      </Link> 
    </div>
   )
 }

@@ -15,8 +15,8 @@ describe('Main Page Spec', () => {
     cy.get('.dropdown-menu').should('exist');
   });
 
-  it('should contain "Continent:" in the dropdown menu', () => {
-    cy.get('.dropdown-menu').contains('Continent:');
+  it('should contain "Country:" in the dropdown menu', () => {
+    cy.get('.dropdown-menu').contains('Country:');
   });
 
   it('should click the second item in the dropdown menu', () => {
@@ -24,7 +24,7 @@ describe('Main Page Spec', () => {
   });
   
   it('should contain a button on the form', () => {
-    cy.get('.dropdown-menu button').should('exist'); // Check if the button exists within the form
+    cy.get('.dropdown-menu button').should('exist');
   });
 
   it('should scroll to the footer', () => {

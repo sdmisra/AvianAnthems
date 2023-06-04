@@ -19,16 +19,6 @@ class Form extends Component<FormProps, FormState> {
     selectedType: 'flight-call'
   }
 
-  // handleChange = (event: any) => {
-  //   console.log(event.target.name)
-  //   console.log(event.target.value)
-  //   if (event.target.name === 'country') {
-  //     console.log(this.state)
-  //   } else {
-  //     console.log(this.state)
-  //   }
-  // }
-
   render() {
       return (
           <form className='dropdown-menu'>
@@ -53,28 +43,22 @@ class Form extends Component<FormProps, FormState> {
                 <select className='song-type' name='song-type' onChange={event => this.setState({selectedType : event.target.value})}>
                   <option value='flight-call'>Flight Call</option>
                   <option value='alarm-call' >Alarm Call</option>
-                  <option value='call'>Common Call</option>
-                  {/* <option value='drumming' >Drumming</option> */}
-                  {/* <option value='all-songs'>Any Song</option> */}
+                  <option value='song'>Common Song</option>
                 </select>
             </label>
             <button 
             className="shrinky-link" 
             data-cy="search"
             onClick={(event) =>{
-              console.log(this.state)
               this.props.fetchResults(event, this.state)
               }}>
             <Link to="/results" className="link-style">
               Search
             </Link>
             </button>
-
           </form>
-  
       )
   }
-
 }
 
 export default Form;
