@@ -13,7 +13,7 @@ Avian Anthems allows people to listen to birdcalls from many of the most interes
 - Figma for mock ups
 - Google Sheets for daily standup
 
-Application is deployed live at: [avian-anthems.vercel.app](avian-anthems.vercel.app)
+#### Application is deployed live at: [avian-anthems.vercel.app](avian-anthems.vercel.app)
 
 ## Preview of App:
 [//]: <>
