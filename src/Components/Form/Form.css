@@ -1,7 +1,7 @@
 .dropdown-menu {
   background-color: #f6fedbcb;
   border: .25rem solid #4B7F52;
-  border-radius: 3.25rem;
+  border-radius: 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -13,6 +13,14 @@
 .shrinky-link {
   width: 4rem;
 }
+
 .link-style {
   text-decoration: none;
+}
+
+@media (max-width: 440px) {
+  .country,
+  .country-label {
+    width: 100%;
+  }
 }

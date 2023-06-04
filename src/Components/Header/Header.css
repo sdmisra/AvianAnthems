@@ -3,15 +3,18 @@ body {
 }
 
 .header {
+  height: 15vh;
   background-color: #f6fedbcb;
   border: .25rem solid #4B7F52;
   border-radius: .15rem;
   display: flex;
   justify-content: space-between;
-  padding: .75rem;
+  align-items: center;
+  /* padding: .75rem; */
 }
 
 .nest-image {
+  margin-left: 20%;
   min-width: 1em;
   min-height: 1em;
   max-height: 6em;
@@ -20,4 +23,17 @@ body {
 
 .nest-image:hover {
   transform: scale(1.2)
+}
+
+@media (max-width: 375px) {
+  .title-styling {
+    width: 60%;
+    /* height: 80%; */
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    height: 20vh;
+  }
 }
