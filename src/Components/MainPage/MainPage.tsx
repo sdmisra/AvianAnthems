@@ -22,25 +22,21 @@ function MainPage( props: MainPageProps ) {
         <span>
         <h4>𝑱𝒐𝒔𝒉𝒖𝒂 𝑴𝒂𝒓𝒕𝒊𝒏:</h4>  
         <a href="https://github.com/jmartin777">GitHub</a>
-        <br></br>
         <a href="https://www.linkedin.com/in/joshua-martin-b57736259/">Linkedin</a>
         </span>
         <span>
-          <h4>𝑺𝒉𝒂𝒏𝒆 𝑴𝒊𝒔𝒓𝒂</h4>
+          <h4>𝑺𝒉𝒂𝒏𝒆 𝑴𝒊𝒔𝒓𝒂:</h4>
           <a href="https://github.com/sdmisra">GitHub</a>
-          <br></br>
           <a href="https://www.linkedin.com/in/shanemisra/">Linkedin</a>
         </span>
         <span>
-        <h4>𝑪𝒂𝒓𝒐𝒍 𝑩𝒓𝒂𝒅𝒔𝒆𝒏</h4>
+        <h4>𝑪𝒂𝒓𝒐𝒍 𝑩𝒓𝒂𝒅𝒔𝒆𝒏:</h4>
           <a href="https://github.com/cbradsen">GitHub</a>
-          <br></br>
           <a href="https://www.linkedin.com/in/carol-bradsen/">Linkedin</a>
         </span>
         <span>
-        <h4>𝑪𝒂𝒅𝒆 𝑪𝒉𝒂𝒏𝒆𝒚</h4>
+        <h4>𝑪𝒂𝒅𝒆 𝑪𝒉𝒂𝒏𝒆𝒚:</h4>
           <a href="https://github.com/cadechaney">GitHub</a>
-          <br></br>
           <a href="https://www.linkedin.com/in/jonathan-chaney-a333ba235/">Linkedin</a>
         </span>
       </footer>

@@ -13,6 +13,19 @@
 .shrinky-link {
   width: 4rem;
 }
+
 .link-style {
   text-decoration: none;
+}
+
+/* .country,
+.country-label {
+  width: 100%;
+} */
+
+@media (max-width: 440px) {
+.country,
+.country-label {
+  width: 100%;
+}
 }
