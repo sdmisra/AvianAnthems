@@ -1,7 +1,8 @@
 # Avian Anthems:
 [//]: <>
-In a world where many people are disconnected from nature, Avian Anthems brings nature's music right to them.  
+In a world where the sounds of birds is becoming more and more rare, Avian Anthems brings nature's music back to our lives.  
 Avian Anthems allows people to listen to birdcalls from many of the most interesting birding areas in the world. 
+Perhaps hearing these avian anthems will inspire people to protect and listen for birds in their off-line worlds. 
 
 ## Technologies
 - React
