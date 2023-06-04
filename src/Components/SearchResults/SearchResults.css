@@ -28,3 +28,9 @@
   margin: -8em;
 }
 
+@media (max-width: 650px) {
+  .image {
+    display: none;
+  }
+}
+
