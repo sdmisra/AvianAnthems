@@ -19,7 +19,7 @@ Avian Anthems allows people to listen to birdcalls from many of the most interes
 [//]: <>
 ![Screen Recording 2023-06-04 at 3 25 52 PM](https://github.com/sdmisra/birdWords/assets/117617970/5f1c65ec-4536-4ae5-96ac-3a4c7757ac21)
 
-[avian-anthems.vercel.app](avian-anthems.vercel.app)
+#### Explore the app for yourself here: [avian-anthems.vercel.app](avian-anthems.vercel.app)
 
 ## Context:
 [//]: <>
