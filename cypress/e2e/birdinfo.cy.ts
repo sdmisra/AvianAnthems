@@ -15,6 +15,16 @@ describe('Search Results', () => {
     
   });
 
- 
+  it('should show more information about the chosen bird, Eastern Bluebird', () => {
+    cy.get('.bird-data-container')
+    .contains('Eastern Bluebird')
+    .contains('male')
+    .contains("flight call")
+    .contains("adult")
+    .contains("United States")
+    .contains("Avon Park Air Force Range, Avon Park, Polk County, Florida")
+    .contains("Patrick J. Blake")
+    .contains("2022-03-27")
+  })
 
 })
