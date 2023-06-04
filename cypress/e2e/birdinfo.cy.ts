@@ -10,9 +10,7 @@ describe('Detailed Bird Info', () => {
     cy.get('.card-header')
     cy.contains('Eastern Bluebird')
     cy.get('button').click() 
-    cy.url().should('include', '/info/712412')
-    
-    
+    cy.url().should('include', '/info/712412') 
   });
 
   it('should show more information about the chosen bird, Eastern Bluebird', () => {
@@ -37,4 +35,9 @@ describe('Detailed Bird Info', () => {
     cy.get('.nest-image').click()
     cy.url().should('include', 'http://localhost:3000')
   })
+
+  it('should have an error message if and error occurs and offer the user a way out/ a way to keep interacting with app', () => {
+    cy.visit('http://localhost:3000/info/checkerror')
+    cy.get('.error-text').contains("An error has occured. Click our corner nest to fly back home!")
+  })  
 })

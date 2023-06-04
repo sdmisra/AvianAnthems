@@ -28,8 +28,7 @@ type birdObject = {
   rec: string;
   also: string;
   rmk: string;
-  osci: {med:string};
-  sono: string;
+  osci: {med: string};
 }
 
 class App extends Component<{}, AppState> {
@@ -38,10 +37,9 @@ class App extends Component<{}, AppState> {
     currentType: "",
     searchResults: [],
 
-    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{ med:''}, sono:'' },
+    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{ med:''} },
     error: 'An error has occured. Click our corner nest to fly back home!'
   }
-
 
   fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt: string, selectedType: string}) => {
       event.preventDefault()
@@ -53,8 +51,7 @@ class App extends Component<{}, AppState> {
   
   handleClick = (id:string) =>{
     const foundBird = this.state.searchResults.find(bird => bird['id']=== id);
-    const resetBird = {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{med:''}, sono:'' }
-
+    const resetBird = {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{med:''} }
 
     if (foundBird) {
       this.setState({chosenBird: foundBird})
@@ -85,8 +82,7 @@ class App extends Component<{}, AppState> {
           </Route>
           <Route path='/info/:id'>
             <BirdInfo 
-            chosenBird={this.state.chosenBird}
-            />
+            chosenBird={this.state.chosenBird} />
           </Route>
           <Route exact path="/error">
             <Error message={this.state.error}/>
@@ -99,7 +95,5 @@ class App extends Component<{}, AppState> {
     )
 }
 }
-
-
 
 export default App;

@@ -9,6 +9,10 @@
   height: 40em;
   
 }
+
+h4 {
+  font-weight: 600;
+}
 .about-us{
   background-color: #f6fedbcb;
   border-top: .25rem solid #4B7F52;
