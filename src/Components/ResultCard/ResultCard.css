@@ -3,9 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border: .33rem solid #4B7F52;
   background-color: #fffaf5af;
   border-radius: 1.25rem;
+  margin: 1%;
 }
 
 .card-controls {

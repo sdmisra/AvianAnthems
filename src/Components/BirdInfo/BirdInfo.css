@@ -1,6 +1,9 @@
-.info-container {
+.bird-info-container {
   border: 0rem solid #80b0c3;
   height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .bird {
@@ -8,16 +11,13 @@
 }
 
 .bird-data-container {
+  height: 80%;
+  width: 95%;
   border: 0.3rem solid #4B7F52;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  /* max-width: 30%; */
-  height: 80%;
-  /* align-items: flex-start; */
-  /* padding: 3rem; */
-  /* margin: 4rem; */
   background-color: #f6fedbcb;
 }
 
