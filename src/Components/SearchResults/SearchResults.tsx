@@ -1,7 +1,7 @@
 import React from 'react'
 import './SearchResults.css'
 import ResultCard from "../ResultCard/ResultCard"
-import plantImage from "/Users/joshuamartin/turing_work/3mod/birdWords/src/assets/plant.png"
+import plantImage from "../../assets/plant.png"
 
 
 type Result = {

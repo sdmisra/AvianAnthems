@@ -2,16 +2,47 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 77vh;
+  height: 70vh;
 }
 
 .blueBirds-image {
-  height: 40em;
-  
+  height: 100%;
 }
+
 .about-us{
+  height: 15vh;
   background-color: #f6fedbcb;
   border-top: .25rem solid #4B7F52;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+span {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+
+@media (max-width: 480px) {
+  .blueBirds-image {
+    height: 80%;
+  }
+}
+
+@media (max-width: 430px) {
+  .about-us{
+    height: 20vh;
+  }
+
+  .info-container {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .blueBirds-image {
+    height: 60%;
+  }
 }

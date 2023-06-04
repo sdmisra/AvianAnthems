@@ -28,7 +28,7 @@ BirdProps ) => {
 
   console.log("Chosen", chosenBird)
     return ( 
-      <div className="info-container">
+      <div className="bird-info-container">
         <img className="bird" src={assets} alt="two birds looking at you from a branch"></img>
         <section className="bird-data-container">
           <h3>{chosenBird.en}</h3>
