@@ -10,7 +10,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: .75rem; */
 }
 
 .nest-image {
@@ -25,10 +24,13 @@ body {
   transform: scale(1.2)
 }
 
+.title-styling {
+  margin-right: 5%;
+}
+
 @media (max-width: 375px) {
   .title-styling {
     width: 60%;
-    /* height: 80%; */
   }
 }
 
