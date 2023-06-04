@@ -23,3 +23,9 @@
   font-weight: bold;
 }
 
+/* @media (max-width: 660px) {
+  .result-card {
+    width: 1.5rem;
+  } 
+} */
+

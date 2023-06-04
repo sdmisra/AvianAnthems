@@ -3,11 +3,11 @@
   height: 85vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; 
 }
 
 .bird {
-  height: 80%;
+  max-height: 80vh;
 }
 
 .bird-data-container {
@@ -19,6 +19,7 @@
   align-items: center;
   border-radius: 10px;
   background-color: #f6fedbcb;
+  padding: 2em;
 }
 
 h3 {

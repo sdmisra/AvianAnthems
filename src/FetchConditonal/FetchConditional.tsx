@@ -16,7 +16,6 @@ export async function FetchConditional(selectedCnt: string, selectedType:string)
 
         return await fetchRecordings(`https://xeno-canto.org/api/2/recordings?query=cnt:%22=${correctCountry}`)
         .then((data: ApiResponse) => {
-          console.log(data)
           const filtered = data.recordings?.filter(recording => recording.type.includes(`${correctType}`)) ?? []
           return filtered
         })
