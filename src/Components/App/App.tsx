@@ -3,7 +3,8 @@ import MainPage from '../MainPage/MainPage'
 import Header from '../Header/Header'
 import SearchResults from '../SearchResults/SearchResults'
 import BirdInfo from '../BirdInfo/BirdInfo'
-import { Route, Switch } from 'react-router-dom'
+import Error from '../Error/Error'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { FetchConditional } from '../../FetchConditonal/FetchConditional'
 
 type AppState = {
@@ -11,6 +12,7 @@ type AppState = {
   currentType: string
   searchResults: Array<{}> | Array<birdObject>
   chosenBird: birdObject
+  error: string
 }
 
 type birdObject = {
@@ -26,7 +28,8 @@ type birdObject = {
   rec: string;
   also: string;
   rmk: string;
-  osci: {med: string};
+  osci: {med:string};
+  sono: string;
 }
 
 class App extends Component<{}, AppState> {
@@ -34,8 +37,11 @@ class App extends Component<{}, AppState> {
     currentCnt: "",
     currentType: "",
     searchResults: [],
-    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci: {med: '' }
-  }}
+
+    chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{ med:''}, sono:'' },
+    error: 'An error has occured. Click our corner nest to fly back home!'
+  }
+
 
   fetchResults = (event: React.MouseEvent<HTMLButtonElement>, formState: {selectedCnt: string, selectedType: string}) => {
       event.preventDefault()
@@ -47,13 +53,16 @@ class App extends Component<{}, AppState> {
   
   handleClick = (id:string) =>{
     const foundBird = this.state.searchResults.find(bird => bird['id']=== id);
+    const resetBird = {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci:{med:''}, sono:'' }
 
-    foundBird ? 
-      this.setState({chosenBird: foundBird}) 
-      : 
-      this.setState({chosenBird: {id:'', en:'', cnt:'', file:'', stage:'', sex:'', type:'', loc:'', date:'', rec:'', also:'',  rmk:'', osci: {med:''}}});
 
-    console.log('App state at time of click:', this.state.chosenBird);
+    if (foundBird) {
+      this.setState({chosenBird: foundBird})
+    }
+    else {
+      this.setState({chosenBird: resetBird, error: 'No results Found! Please fly back home and try again'});
+      <Redirect to='/error'/>
+    }
   }
 
   render() {
@@ -77,8 +86,13 @@ class App extends Component<{}, AppState> {
           <Route path='/info/:id'>
             <BirdInfo 
             chosenBird={this.state.chosenBird}
-            
             />
+          </Route>
+          <Route exact path="/error">
+            <Error message={this.state.error}/>
+          </Route>
+          <Route>
+            <Redirect to="/error"/>
           </Route>
         </Switch>
       </div>
