@@ -7,7 +7,6 @@
 
 .blueBirds-image {
   height: 100%;
-  
 }
 
 .about-us{
@@ -23,6 +22,7 @@ span {
   height: 80%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2%;
 }
 
 @media (max-width: 480px) {
