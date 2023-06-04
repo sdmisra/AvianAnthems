@@ -1,4 +1,4 @@
-describe('Search Results', () => {
+describe('Detailed Bird Info', () => {
    beforeEach(() => {
 
     cy.intercept('GET', 'https://xeno-canto.org/api/2/**', { fixture: 'mock-data' }); 
