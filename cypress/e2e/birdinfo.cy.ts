@@ -21,10 +21,20 @@ describe('Search Results', () => {
     cy.get('p').contains('male')
     cy.get('p').contains("flight call")
     cy.get('p').contains("adult")
-    .contains("United States")
-    .contains("Avon Park Air Force Range, Avon Park, Polk County, Florida")
-    .contains("Patrick J. Blake")
-    .contains("2022-03-27")
+    cy.get('p').contains("United States")
+    cy.get('p').contains("Avon Park Air Force Range, Avon Park, Polk County, Florida")
+    cy.get('p').contains("Patrick J. Blake")
+    cy.get('p').contains("2022-03-27")
+    cy.get('.remark').contains("Male eastern bluebird performing flight song")
   })
 
+  it('should show audio files about chosen bird', () => {
+    cy.get('.bird-info-audio')
+    cy.get('.osci-image')
+  })
+
+  it('should have a way to navigate back to the main page', () => {
+    cy.get('.nest-image').click()
+    cy.url().should('include', 'http://localhost:3000')
+  })
 })

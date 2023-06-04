@@ -36,7 +36,7 @@ BirdProps ) => {
           <p>{chosenBird.type}</p>
           <p>Recorded in {chosenBird.cnt} at {chosenBird.loc} on {chosenBird.date}</p>
           <p>Recorded by {chosenBird.rec}</p>
-          <p style={{fontStyle: "italic"}}>{chosenBird.rmk}</p>
+          <p className="remark" style={{fontStyle: "italic"}}>{chosenBird.rmk}</p>
         </section>
         <section className="audio-details-container">
           <audio src={chosenBird.file} controls className="bird-info-audio"></audio>
