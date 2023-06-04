@@ -23,12 +23,12 @@ describe('Search Results', () => {
   })
 
   it('should have the location country of United States', () => {
-    cy.get('.result-card > :nth-child(2)')
+    cy.get('.result-card > :nth-child(1)')
     .contains("United States")
   })
 
   it('should have a type call of flight call', () => {
-    cy.get('.result-card > :nth-child(3)')
+    cy.get('.details > :nth-child(3)')
       .contains("flight")
   })
 
