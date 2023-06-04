@@ -1,5 +1,5 @@
 .result-card {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 15rem;
@@ -13,23 +13,21 @@
 
 .card-detail {
   margin: .4rem;
-
 }
+
 .card-controls {
   filter: sepia(80%) saturate(90%) grayscale(0) contrast(99%) invert(12%);
-  scale: .65
-  
+  scale: .65;
 }
 
-.more-info{
+.more-info {
   margin: .5rem;
   width: 8rem;
-    height: 2rem;
-    color: black;
-    background-color: #b6c454;
-    font-weight: bold;
+  height: 2rem;
+  color: black;
+  background-color: #b6c454;
+  font-weight: bold;
 }
-
 
 @media (max-width: 320px) {
   .search-results-container {
@@ -38,24 +36,27 @@
 }
 
 @media (min-width: 321px) and (max-width: 767px) {
-.search-results-container {
-  grid-template-columns: repeat(2, 1fr); 
-}
+  .search-results-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
-.search-results-container {
-  grid-template-columns: repeat(3, 1fr);
-}
+  .search-results-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 1201px) {
-.search-results-container {
-  grid-template-columns: repeat(4, 1fr); 
-}
+  .search-results-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-.result-card {
-  max-width: 100%; 
-  margin: 1rem; 
+@media (max-width: 768px) {
+  .result-card {
+    max-width: 100%;
+    margin: 1rem;
+  }
 }
+

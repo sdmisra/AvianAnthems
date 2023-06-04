@@ -46,13 +46,14 @@ const SearchResults = ({ results, getInfo }: SearchResultsProps ) => {
 })
 return (
   <div className="results-page">
-    <h1>Search Results:</h1>
+    <h1>𝑺𝒆𝒂𝒓𝒄𝒉 𝒓𝒆𝒔𝒖𝒍𝒕𝒔:</h1>
     <section className="search-results-container">
       <div className="image-container">
         <img src={plantImage} alt="Plant" className="image" />
       </div>
       {resultCards}
     </section>
+    
   </div>
 );
 }
