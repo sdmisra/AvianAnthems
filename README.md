@@ -10,6 +10,10 @@ Avian Anthenms allows people to listen to birdcalls from many of the most intere
 - Router
 - Typescript
 - Cypress testing
+- GitHub Project Board
+- Mira project planning 
+- Figma for mock ups
+- Google Sheets for daily standup
 
 Application is deployed live at: [avian-anthems.vercel.app](avian-anthems.vercel.app)
 
@@ -35,6 +39,10 @@ This was a project by Front End students at the Turing School of Software and De
 [//]: <>
 - expand and deepen our understanding of our individual learning process & dynamics within a team 
 - build a multi-page application using React Router, an api of our choosing, and a new technology
+
+## Challenges & Wins:
+- learning a new technology on our own and using it in an application over less than 2 weeks was a challenge and a win
+- our projct team had great work processes facilitated by excellent communication, daily standups, and a github project board
 
 ## Future Feature Ideas:
 [//]: <>
